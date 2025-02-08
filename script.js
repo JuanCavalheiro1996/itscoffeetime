@@ -1,18 +1,18 @@
 const answers = [
-    "Yes, it's coffee time! ☕️ Go grab a cup!",
-    "Not yet... but maybe in 5 minutes? ⏳",
-    "Only if it's espresso! 🚀",
-    "No, but have some water first! 💧",
-    "Definitely! But make it a double! ✌️",
-    "Nope, it's tea time! 🫖 Just kidding, it's always coffee time!"
+    "Sim, está na hora do café! ☕️ Vá pegar uma xícara!",
+    "Ainda não... mas talvez em 5 minutos? ⏳",
+    "Só se for um espresso! 🚀",
+    "Não, mas tome um copo d'água antes! 💧",
+    "Com certeza! E que seja um café duplo! ✌️",
+    "Não, é hora do chá! 🫖 Brincadeira, é sempre hora do café!"
 ];
 
 const funFacts = [
-    "Coffee was discovered by goats in Ethiopia!",
-    "The world consumes over 2 billion cups of coffee every day.",
-    "Coffee beans are actually seeds from a fruit called a coffee cherry.",
-    "The most expensive coffee in the world is made from elephant dung!",
-    "Finland is the country that drinks the most coffee per capita."
+    "O café foi descoberto por cabras na Etiópia!",
+    "O mundo consome mais de 2 bilhões de xícaras de café por dia.",
+    "Os grãos de café são, na verdade, sementes de uma fruta chamada cereja do café.",
+    "O café mais caro do mundo é feito a partir de fezes de elefante!",
+    "A Finlândia é o país que mais consome café por pessoa."
 ];
 
 const answerElement = document.getElementById('answer');
@@ -28,14 +28,14 @@ function getRandomAnswer() {
 // Mostra uma curiosidade aleatória
 function getRandomFunFact() {
     const randomIndex = Math.floor(Math.random() * funFacts.length);
-    funFactElement.textContent = `Did you know? ${funFacts[randomIndex]}`;
+    funFactElement.textContent = `Sabia? ${funFacts[randomIndex]}`;
 }
 
 // Timer de 4 minutos
 timerButton.addEventListener('click', () => {
-    alert("Timer started! Your coffee will be ready in 4 minutes. ⏳");
+    alert("Timer iniciado! Seu café estará pronto em 4 minutos. ⏳");
     setTimeout(() => {
-        alert("Coffee time! Enjoy your brew. ☕️");
+        alert("Hora do café! Aproveite a sua bebida. ☕️");
     }, 240000); // 4 minutos em milissegundos
 });
 
