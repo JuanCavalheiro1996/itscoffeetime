@@ -12,8 +12,24 @@
         <p id="answer">Carregando...</p>
         <img id="coffee-image" src="assets/coffee-time.gif" alt="Hora do café!">
         <button id="timer-button">Iniciar timer de 4 minutos</button>
+        <button id="cancel-timer" class="hidden">Cancelar timer</button> <!-- Novo botão -->
+        <p id="countdown"></p>
+        <button id="refresh-button">Atualizar Resposta e Curiosidade</button>
         <p id="fun-fact">Sabia? O café foi descoberto por cabras na Etiópia!</p>
+        
+        <!-- Botão para exibir o histórico -->
+        <button id="show-history">Ver histórico de pausas</button>
+        
+        <!-- Área para exibir o histórico -->
+        <div id="history-container" class="hidden">
+            <h2>Histórico de Pausas para o Café</h2>
+            <ul id="history-list"></ul>
+            <button id="clear-history">Limpar histórico</button>
+        </div>
     </div>
+    <footer>
+        <p>Feito com ☕️ por [Seu Nome]</p>
+    </footer>
     <script src="script.js"></script>
 </body>
 </html>

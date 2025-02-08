@@ -1,28 +1,63 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Centraliza tudo na página */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f1ea;
+    background: linear-gradient(135deg, #f4f1ea, #d7ccc8);
     color: #3e2723;
     text-align: center;
-    padding: 50px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.container {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%;
+    margin: auto;
 }
 
 h1 {
     font-size: 3rem;
     margin-bottom: 20px;
+    color: #4e342e;
 }
 
 #answer {
     font-size: 2rem;
     font-weight: bold;
     margin: 20px 0;
+    color: #6d4c41;
 }
 
 #coffee-image {
-    width: 200px;
-    margin: 20px 0;
+    width: 70px;
+    margin: -20px 0;
+    animation: bounce 2s infinite;
 }
 
-#timer-button {
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+#timer-button, #refresh-button, #show-history, #clear-history, #cancel-timer {
     background-color: #6f4e37;
     color: white;
     border: none;
@@ -31,10 +66,64 @@ h1 {
     cursor: pointer;
     border-radius: 5px;
     margin-top: 20px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#timer-button:hover, #refresh-button:hover, #show-history:hover, #clear-history:hover, #cancel-timer:hover {
+    background-color: #5a3c2e;
+    transform: scale(1.05);
 }
 
 #fun-fact {
     margin-top: 30px;
     font-style: italic;
     color: #5d4037;
+}
+
+#countdown {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: #4e342e;
+}
+
+footer {
+    margin-top: 30px;
+    font-size: 0.9rem;
+    color: #5d4037;
+}
+
+/* Estilos para o histórico */
+#history-container {
+    margin-top: 30px;
+    text-align: left;
+}
+
+#history-container.hidden {
+    display: none;
+}
+
+#history-list {
+    list-style-type: none;
+    margin-top: 10px;
+}
+
+#history-list li {
+    margin: 5px 0;
+    font-size: 0.9rem;
+    color: #4e342e;
+}
+
+#clear-history {
+    margin-top: 10px;
+    background-color: #8b5e3c;
+}
+
+/* Estilo para o botão de cancelar timer */
+#cancel-timer {
+    background-color: #8b5e3c;
+    display: none; /* Inicialmente oculto */
+}
+
+#cancel-timer.visible {
+    display: inline-block; /* Exibido quando o timer está ativo */
 }
